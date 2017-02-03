@@ -1,0 +1,12 @@
+# Displays the present working directory
+pwd
+
+# Change to your home directory (short-cut name is ~ (tilde))
+cd ~ or cd
+
+# Change to parent directory (..)
+cd ..
+
+# Change to previous directory (- (minus))
+cd -
+

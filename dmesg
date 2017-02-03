@@ -1,0 +1,5 @@
+# список обнаруженных ядром последовательных портов
+ dmesg | grep ttyS
+
+# shows the OutOfMemory-killer at work
+dmesg | grep oom-killer

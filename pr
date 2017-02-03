@@ -1,0 +1,2 @@
+# Display two files side by side
+pr -w $COLUMNS -m -t one.txt two.txt

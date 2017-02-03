@@ -1,0 +1,8 @@
+# show list running's VM
+vboxmanage list runningvms
+
+# take VM snapshot
+vboxmanage snapshot  <vm_name> take  <snapshot_name>
+
+# 
+vboxmanage snapshot  <vm_name> list

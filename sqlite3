@@ -1,0 +1,14 @@
+# show table description
+pragma table_info(table);
+
+# Determining execution time of queries in SQLite
+.timer ON
+
+# Delete complete data from an existing table
+DELETE FROM table_name;
+
+# If you are using DELETE TABLE command to delete all the records, it is recommended to use VACUUM command to clear unused space
+VACUUM;
+
+# Drop complete table and re-create it once again
+DROP TABLE table_name;

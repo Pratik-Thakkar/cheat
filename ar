@@ -1,0 +1,7 @@
+## DEB files are ar archives, which contain three files:
+##    debian-binary
+##    control.tar.gz (data.tar.xz on new debian distro)
+##    data.tar.gz
+
+# Extract files from the DEB file
+ar vx mypackage.deb

@@ -1,0 +1,28 @@
+#Adding a new user
+useradd <USERNAME>
+
+#Change password
+passwd <USERNAME>
+
+#Removing an existing user
+userdel <USERNAME>
+
+#Removing an existing user and the home directory
+userdel -r  <USERNAME>
+
+#Report information about other user
+id <USERNAME>
+
+#Adding a user to an already existing group
+usermod -G <GROUP> <USERNAME>
+
+##################################################
+
+#Adding a new group
+groupadd <GROUP>
+
+#Removing an existing group
+groupdel <GROUP>
+
+#Change group properties such as the Group ID
+groupmod -g <GID> <GROUP>

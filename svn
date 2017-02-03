@@ -1,0 +1,43 @@
+# update working copy from repository
+svn update "/path"
+
+# show changed files in working copy
+svn status
+
+# show what changed in local file
+svn diff "/path/filename"
+
+# add files or folders
+svn add "path/item"
+
+# revert local uncommited changes
+svn revert "/path/file"
+
+# commit changes to repo
+svn commit -m "message" "/path"
+
+# show help for 'svn diff'
+svn help diff
+
+# show last 10 commits 
+svn log  --limit 10 svn://svn.wildix.in/
+
+# show difference between last revision
+svn diff -c 32947 svn://svn.wildix.in/
+
+# show difference in testing package
+svn diff --summarize  "/path" | awk '{print $2}'  | xargs svn diff
+
+# show specified file revision
+svn cat -r 33333 "/path/file" 
+
+# show log for branch
+svn log  --stop-on-copy "path_to_branch"
+
+# 
+svn diff -r first_commit:last_commit "path_to_branch"
+
+# create package on buildfarm from branch
+svn co svn://svn.wildix.in/wms-interface/branches/vyacheslav.dobrenko/WMS-1606
+cd WMS-1606/
+./make_pack.sh 1000 all

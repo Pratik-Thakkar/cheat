@@ -1,0 +1,55 @@
+# To connect to a database
+mysql -h localhost -u root -p
+
+# To backup all databases
+mysqldump --all-databases --all-routines -u root -p > ~/fulldump.sql
+
+# To restore all databases
+mysql -u root -p  < ~/fulldump.sql
+
+# To create a database in utf8 charset
+CREATE DATABASE owa CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+# users list
+SELECT user,host FROM mysql.user;
+
+# show grants for user
+SHOW GRANTS FOR root@localhost;
+
+# create user 
+CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
+
+# To add a user and give rights on the given database
+GRANT ALL PRIVILEGES ON database.* TO 'user'@'localhost'IDENTIFIED BY 'password' WITH GRANT OPTION;
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER,INDEX ON dbname.* TO 'user'@'localhost';
+
+# revoke grants for user
+REVOKE ALL ON dbname.* FROM 'user'@'localhost';
+
+# Перезагрузка привелегий
+FLUSH PRIVILEGES;
+
+# Просмотр всех существующих баз
+SHOW DATABASES;
+
+# Создание и выбор
+CREATE DATABASE <db_name>;
+USE <db_name>
+
+# Просмотр последних N записей
+SELECT <fields> FROM <table> ORDER BY <id> DESC LIMIT <N> ;
+
+# Просмотр первых N записей
+SELECT <fields> FROM <table> ORDER BY <id> ASC LIMIT <N> ;
+
+# Просмотр информации о таблице
+show columnes from <table> ;
+desc <table>;
+
+# Просмотр количества записей в таблице
+SELECT COUNT(*) FROM table;
+
+# Удалить все записи из таблицы
+truncate <table>;
+delete from <table>;
+

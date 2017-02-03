@@ -1,0 +1,10 @@
+top
+dstat
+iostat
+mpstat
+df
+mount
+	lscpu
+	lspci
+	dmidecode
+

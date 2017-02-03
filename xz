@@ -1,0 +1,14 @@
+#Compress all of the files in the current directory and replace each file with one with a .xz extension
+xz *
+
+#Compress the file foo into foo.xz using the default compression level (-6), and remove foo if compression succeeds
+xz foo
+
+#Decompress bar.xz into  bar and don't remove bar.xz even if decompression is successful.
+xz -dk bar.xz
+
+#Decompress a mix of compressed and uncompressed files to standard output, using a single command.
+xz -dcf a.txt b.txt.xz > abcd.txt 
+
+#Decompress the files compressed using xz
+xz -d *.xz 
