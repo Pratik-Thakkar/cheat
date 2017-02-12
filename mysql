@@ -53,3 +53,8 @@ SELECT COUNT(*) FROM table;
 truncate <table>;
 delete from <table>;
 
+# view via less
+default-character-set = 'utf8'
+pager = 'less -n -i -S'
+prompt = '\u@\h [\d] > '
+
