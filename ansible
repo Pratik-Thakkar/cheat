@@ -1,0 +1,2 @@
+# Check connetctions to hosts
+ansible all -i inventory.tmp -m ping

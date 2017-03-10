@@ -1,0 +1,15 @@
+# show apache config
+httpd -S
+
+# syntax check apache config 
+httpd -t
+
+# syntax check for config files and show parsed settings only for vhost
+httpd -t -D DUMP_VHOSTS
+
+# Causes the current httpd process to exit, which means for a time the server appears to be down, as in not serving any requests
+httpd restart
+                              
+# Does not cause the current server to exit, which means connections are never refused and thus the server never looks down (but is rather slow for a little while)
+# Will cause all long running httpd daemon requests to exit
+httpd reload
