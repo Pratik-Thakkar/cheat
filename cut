@@ -1,0 +1,5 @@
+# To cut out the third field of text or stdoutput that is delimited by a #:
+cut -d# -f3
+
+# Print from column #5 to end of line
+cut -d' ' -f5- file

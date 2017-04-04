@@ -67,3 +67,6 @@ tcpdump -i any host 192.168.1.59 -T rtp -vvvvv -s 0 -w test.pcap
 
 # Like ngrep
 tcpdump -nq -s 0 -A -vvv -i eth0 port 5060
+
+# Print to stdout and save to file
+tcpdump  -U -s0 -w -  | tee <filename> | tcpdump -Annvv -r -

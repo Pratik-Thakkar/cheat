@@ -1,0 +1,2 @@
+# monitoring example
+dstat -n -m -s --top-mem --top-cpu --load
